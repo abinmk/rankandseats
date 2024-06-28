@@ -1,0 +1,39 @@
+.filters-section {
+  width: 300px;
+  transition: transform 0.3s ease;
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  left: 10px;
+  top: 120px; /* Adjust this value based on your header height */
+  height: calc(100vh - 130px); /* Adjust this value based on your header height */
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+
+  &.hide {
+    transform: translateX(-100%);
+    left: 0px;
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  .filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .close-btn {
+      color: gray;
+      font-size: 24px;
+      text-decoration: none;
+      &:hover {
+        color: darkgray;
+      }
+    }
+  }
+}
